@@ -102,6 +102,23 @@
 82.	insert a element in specified location in array
 83.	Delete a element from a specified index in array
 84.	Wajp to intersection between two array elements
+
+105.	READ TWO DIMENSIONAL ARRAY, RETURN TWO DIMENSIONAL ARRAY
+106.	FIND LARGEST AND SMALLEST ELEMENT IN ARRAY 
+107.	ADD TWO MATRIX
+108.	TRANSPOSE OF MATRIX
+109.	ROW WISE AND COLUMN WISE BIGGEST ELEMENT
+110.	ROW WISE AND COLUMN WISE REVESE ELEMENT
+111.	ROTATE MATRIX 90 DEGREE LEFT AND 90 DEGREE RIGHT
+112.	Read DIAGONAL ELEMENT ,REVERSE DIAGONAL ELEMENT
+113.	FIND SMALLEST AND LARGEST IN DIAGONAL ELEMENT
+114.	MULTIPLY TWO MATRIX
+115.	ROW WISE AND COLUMN WISE SUM OF MATRIX
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                            STRING
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 85.	Wajp to convert a user entered number into sentence
 86.	WAJP TO ENTER A DATE IN DD MM YYYY FORMAT AND FIND THE CORRESPONDING DAY NAME
 87.	WAJP TO COUNT THE NUMBER OF DAYS BETWEEN TO DATE (DD MM YYYY FORMAT)
@@ -137,14 +154,4 @@ EX: Rama and laxman
 aamr dna naxmal
 
 104.	 First and second and last index of sentence from where sub string occurrence present. if not present return =-1
-105.	READ TWO DIMENSIONAL ARRAY, RETURN TWO DIMENSIONAL ARRAY
-106.	FIND LARGEST AND SMALLEST ELEMENT IN ARRAY 
-107.	ADD TWO MATRIX
-108.	TRANSPOSE OF MATRIX
-109.	ROW WISE AND COLUMN WISE BIGGEST ELEMENT
-110.	ROW WISE AND COLUMN WISE REVESE ELEMENT
-111.	ROTATE MATRIX 90 DEGREE LEFT AND 90 DEGREE RIGHT
-112.	Read DIAGONAL ELEMENT ,REVERSE DIAGONAL ELEMENT
-113.	FIND SMALLEST AND LARGEST IN DIAGONAL ELEMENT
-114.	MULTIPLY TWO MATRIX
-115.	ROW WISE AND COLUMN WISE SUM OF MATRIX
+
