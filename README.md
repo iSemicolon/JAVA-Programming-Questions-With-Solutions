@@ -117,18 +117,298 @@
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                                            STRING
+                                                                       STRING
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-85.	Wajp to convert a user entered number into sentence
+/*
+String to Character Conversion :
+
+String s="JAVA";
+char array[]=s.toCharArray();
+
+Character At Particular Index :
+
+char array=s.charAt(1); //A
+
+LENGTH OF STRING = s.length();
+
+*/
+
+
+85.	WAJP TO CONVERT A USER ENTERED NUMBER INTO A SENTENCE. 
+
+Input::211652509
+output: Twenty One Crore Sixteen Lakh Fifty Two Thousand Five Hundred Nine
+
+
+
+Programm::
+
+import java.util.Scanner;
+
+class TestNumberToSentence{
+public static void isNumberToSentence(int num, String s){
+
+String one[]={"","One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven","Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+
+String two[]={"","","Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy","Eighty", "Ninety"};
+
+
+if(num>=20)
+{
+
+System.out.print( two[num/10]+" "+ one[num%10]);
+
+}
+
+else
+{
+System.out.print(one[num]);
+}
+
+if(num!=0)
+{
+
+System.out.print(" "+s+" ");
+}
+
+}
+public static void main(String args[])
+
+
+{
+
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter The Number");
+
+int n=sc.nextInt();
+
+//Crore Calculate
+isNumberToSentence((n/10000000), "Crore"); //21
+
+//Lakh Calculate
+isNumberToSentence(((n/100000)%100), "Lakh"); // 2116%100=16
+
+//Thousand Calculate
+isNumberToSentence(((n/1000)%100), "Thousand"); // 211652%100=52
+
+
+//Hundred Calculate
+isNumberToSentence(((n/100)%10), "Hundred"); //2116525%10=5
+
+
+//Decimal Calculation
+isNumberToSentence(n%100,"");
+
+
+}
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 86.	WAJP TO ENTER A DATE IN DD MM YYYY FORMAT AND FIND THE CORRESPONDING DAY NAME
+
+input- 07-04-1997
+output- Monday
+
+
+Programm:
+
+import java.util.Scanner;
+class TestDayName
+{
+
+public static void isDayName(int d, int m, int y)
+{
+
+
+String day[]={"Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"};
+int month[]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+
+int totalDay=0;
+//calculate numbers of day from 0 to particular year
+
+y=y-1;
+
+totalDay=365*y;
+
+//extra day because of leap year
+
+int ed= (y/400)+(y/4)-(y/100);
+
+totalDay=totalDay+ed;
+
+// Calculate the day from o to particular month of particular Year
+
+ m=m-1;
+
+for(int i=1; i<=m;i++)
+{
+totalDay=totalDay+month[i];
+}
+
+//Number of for that month
+
+totalDay=totalDay+d;
+
+
+System.out.println((d)+"-"+(m+1)+"-"+(y+1)+" "+" is "+day[totalDay%7]);
+
+
+}
+
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter Date DD FORMAT");
+int d=sc.nextInt();
+
+System.out.println("Enter Month MM FORMAT");
+int m=sc.nextInt();
+
+System.out.println("Enter Year YYYY FORMAT");
+int y=sc.nextInt();
+
+isDayName(d,m,y);
+
+}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 87.	WAJP TO COUNT THE NUMBER OF DAYS BETWEEN TO DATE (DD MM YYYY FORMAT)
+
+input1-07-04-1997
+input2-02-03-1800
+
+output-71989
+
+programm::
+import java.util.Scanner;
+class TestDayCount
+{
+
+public static int isDayCount(int d, int m, int y)
+{
+
+int month[]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+
+int totalDay=0;
+//calculate numbers of day from 0 to particular year
+
+y=y-1;
+
+totalDay=365*y;
+
+//extra day because of leap year
+
+int ed= (y/400)+(y/4)-(y/100);
+
+totalDay=totalDay+ed;
+
+// Calculate the day from o to particular month of particular Year
+
+ m=m-1;
+
+for(int i=1; i<=m;i++)
+{
+totalDay=totalDay+month[i];
+}
+
+//Number of day for that month
+
+totalDay=totalDay+d;
+
+
+return totalDay;
+
+}
+
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("First Date");
+System.out.println("Enter Date DD FORMAT");
+int d1=sc.nextInt();
+
+System.out.println("Enter Month MM FORMAT");
+int m1=sc.nextInt();
+
+System.out.println("Enter Year YYYY FORMAT");
+int y1=sc.nextInt();
+
+int td1=isDayCount(d1,m1,y1);
+
+
+System.out.println("Second Date");
+System.out.println("Enter Date DD FORMAT");
+int d2=sc.nextInt();
+
+System.out.println("Enter Month MM FORMAT");
+int m2=sc.nextInt();
+
+System.out.println("Enter Year YYYY FORMAT");
+int y2=sc.nextInt();
+
+int td2=isDayCount(d2,m2,y2);
+
+System.out.println("Day Difference Between Two days is "+(td1-td2));
+
+}
+}
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 88.	CONVERT STRING TO CHARACTER ARRAY, STRING DIGIT TO INTEGER, STRING ELEMENT TO CHAR
 89.	FIND STRING LENGTH, INDEX VALUE, INDEX ELEMENT OF PARTICULAR STRING
 90.	TAKE INPUT FROM USER AND PRINT FIRST AND LAST LETTER, SECOND LAST LETTER
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 91.	PRINT REVERSE STRING
-92.	REVESE STRING WITHOUT AFFECTING SPECIAL CHARACTER
-I-AB@C
-O-CB@A
+
+INPUT:: I AM PALASH
+OUTPUT:: HSALAP MA I
+
+
+
+import java.util.Scanner;
+
+class TestReverseString
+{
+public static void isReveseString(String st)
+{
+
+String str="";
+
+for(int i=st.length() -1; i>=0; i--)
+{
+
+str=str+st.charAt(i);
+}
+
+System.out.println(str);
+
+}
+
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter String");
+String s=sc.nextLine();
+
+isReveseString(s);
+
+}
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+92.	REVERSE STRING WITHOUT AFFECTING SPECIAL CHARACTER
+
+INPUT-AB@C
+OUTPUT-CB@A
+
+
 93.	WAJP TO COUNT HOW MANY UPPER CASE , LOWER CASE, VOWEL, CONSONANT, DIGITS, SPECIAL CASE IN A GIVEN STRING
 94.	WAJP TO ADD ALL THE DIGITS IN GIVEN STRING
 95.	Count number of occurrence of a string
