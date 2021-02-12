@@ -354,6 +354,7 @@ int td2=isDayCount(d2,m2,y2);
 System.out.println("Day Difference Between Two days is "+(td1-td2));
 
 }
+
 }
 
 
@@ -408,12 +409,75 @@ isReveseString(s);
 INPUT-AB@C
 OUTPUT-CB@A
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 93.	WAJP TO COUNT HOW MANY UPPER CASE , LOWER CASE, VOWEL, CONSONANT, DIGITS, SPECIAL CASE IN A GIVEN STRING
 94.	WAJP TO ADD ALL THE DIGITS IN GIVEN STRING
-95.	Count number of occurrence of a string
-AbcAe
-A-2, B-1, C-1, E-1
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+95.	COUNT NUMBER OF OCCURENCE OF A STRING
+input- I AM PALASH
+OUTPUT-
+I No Of Occurence: 1
+A No Of Occurence: 3
+M No Of Occurence: 1
+P No Of Occurence: 1
+L No Of Occurence: 1
+S No Of Occurence: 1
+H No Of Occurence: 1
+
+programm::
+
+import java.util.Scanner;
+
+class TestLetterCount{
+
+public static void isCount(String st)
+{
+
+int count[]=new int[256];
+
+for(int i=0; i<st.length();i++)
+{
+
+count[st.charAt(i)]++;
+}
+
+for(int j=0; j<st.length();j++)
+{
+int flag=0;
+char ch=st.charAt(j);
+for(int k=0; k<=j;k++)
+{
+
+if(ch==st.charAt(k))
+{
+flag++;
+}
+
+
+}
+
+if(ch!=' ' && flag==1)
+{
+System.out.println(ch+" No Of Occurence: "+count[ch]);
+}
+
+}
+
+}
+
+public static void main(String args[])
+
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter String");
+
+String s=sc.nextLine();
+
+isCount(s);
+}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 96.	WAJP TO CONVERT ALL SENTENCE IN UPPER CASE AND ALSO LOWER CASE
 97.	WAJP TO COUNT HOW MANY WORD IN GIVEN SENTENCE
 98.	WAJP TO CONVERT EVERY WORD FIRST CHARACTER INTO CAPITAL REMAINING ALL TO SMALL
