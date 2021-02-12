@@ -57,7 +57,7 @@
 55.	Write a method and return product of digits
 56.	Return sum of first n prime numbers
 57.	Find average of digits
-58.	Print 
+58.	Print Fibonacci Series With & Without Recursion
 *****
 *****
 *****
