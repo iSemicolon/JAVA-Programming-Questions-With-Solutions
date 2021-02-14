@@ -479,7 +479,47 @@ isCount(s);
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 96.	WAJP TO CONVERT ALL SENTENCE IN UPPER CASE AND ALSO LOWER CASE
-97.	WAJP TO COUNT HOW MANY WORD IN GIVEN SENTENCE
+
+
+97.	WAJP TO COUNT HOW MANY WORD PRESENT IN GIVEN A GIVEN SENTENCE
+
+input: I AM PALASH
+input: AM I PALASH
+
+output: 3
+
+import java.util.Scanner;
+class TestCountWord{
+
+public static void isWordCount(String s){
+
+int count=0;
+
+for(int i=0; i<s.length();i++)
+{
+
+if((i==0 && s.charAt(i)!=' ') ||(s.charAt(i)!=' ' && s.charAt(i-1)==' '))
+{
+count++;
+}
+}
+
+System.out.println("Number Of Word Present is : "+count);
+
+}
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter String As a Sentence");
+String st=sc.nextLine();
+
+isWordCount(st);
+}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+98. WAJP GIVEN SUBSTRING IS PRESENT OR NOT IN A  STRING
+99. WAJP HOW MANY TIMES SUBSTRING PRESENT IN A STRING 
 98.	WAJP TO CONVERT EVERY WORD FIRST CHARACTER INTO CAPITAL REMAINING ALL TO SMALL
 I am PALasH
 I Am Palash
