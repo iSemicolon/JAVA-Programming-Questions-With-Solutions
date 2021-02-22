@@ -519,8 +519,69 @@ isWordCount(st);
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 98. WAJP GIVEN SUBSTRING IS PRESENT OR NOT IN A  STRING
-99. WAJP HOW MANY TIMES SUBSTRING PRESENT IN A STRING 
-98.	WAJP TO CONVERT EVERY WORD FIRST CHARACTER INTO CAPITAL REMAINING ALL TO SMALL
+
+
+import java.util.Scanner;
+
+class TestSubStringFind{
+
+ public static boolean isStringFind(String str, String s)
+{
+
+
+
+for(int i=0; i<str.length(); i++)
+{
+
+int j=i;
+int k=0;
+System.out.println(str.length()+" "+s.length());
+
+while( (k<s.length()) && (s.charAt(k)==str.charAt(j)) &&(j<str.length()) )
+{
+j++; //2-7
+k++;
+System.out.println(j+" "+k);
+}
+
+
+if(k==s.length())
+{
+return true;
+}
+}
+
+return false;
+
+}
+
+public static void main(String args[])
+{
+
+Scanner sc=new Scanner(System.in);
+
+String str="APALASHPALASH SAMANDTA PALASH SAMANTA PALASH ";
+System.out.println("ENTER STRING");
+String s=sc.nextLine();
+System.out.println("ENTER STRING");
+boolean bool=isStringFind(str, s);
+
+if(bool==true)
+{
+System.out.println("String is Present");
+}
+
+else
+{
+System.out.println("String is NOT Present");
+}
+
+}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+100. WAJP HOW MANY TIMES SUBSTRING PRESENT IN A STRING 
+101.	WAJP TO CONVERT EVERY WORD FIRST CHARACTER INTO CAPITAL REMAINING ALL TO SMALL
 I am PALasH
 I Am Palash
 99.	WAJP TO CONVERT EVERY WORD Last CHARACTER INTO CAPITAL REMAINING ALL TO Upper
