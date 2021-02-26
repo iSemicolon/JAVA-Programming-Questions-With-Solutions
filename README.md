@@ -273,7 +273,48 @@ isDayName(d,m,y);
 
 }
 }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Converting seconds into days, hours, minutes and seconds
 
+input:100000
+output:
+Day: 1
+Hour: 3
+Minute: 46
+Seconds: 40
+
+import java.util.Scanner;
+class ConvertSecToDay{
+
+static void isTimeFormat(int s){
+
+int day= s/(24*3600);
+System.out.println("Day: "+day);
+
+s=s%(24*3600);
+
+int hour=s/3600;
+System.out.println("Hour: "+hour);
+
+s=s%3600;
+
+int minutes=s/60;
+System.out.println("Minute: "+minutes);
+
+s=s%60;
+
+int seconds=s;
+System.out.println("Seconds: "+seconds);
+
+}
+public static void main(String args[])
+{
+System.out.println("Enter Seconds");
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+isTimeFormat(n);
+}
+}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 87.	WAJP TO COUNT THE NUMBER OF DAYS BETWEEN TO DATE (DD MM YYYY FORMAT)
 
